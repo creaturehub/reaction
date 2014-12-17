@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comments</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+  </head>
+  <body>
+
+    <div class="container" id="content">
+    </div>
+
+    <script src="../js/react.js"></script>
+    <script src="../js/JSXTransformer.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/jsx">
+      var CommentBox = React.createClass({
+        render: function() {
+          return (
+            <div className="commentBox">
+              <h1>Comments</h1>
+              <CommentList />
+              <CommentForm />
+            </div>
+          );
+        }
+      });
+
+      var CommentList = React.createClass({
+        render: function() {
+          return (
+            <div className="commentList">
+             Hello, world! I am a CommentList.
+            </div>
+          );
+        }
+      });
+
+      var CommentForm = React.createClass({
+        render: function() {
+          return (
+            <div className="commentForm">
+              Hello, world! I am a CommentForm. 
+            </div>
+          );
+        }
+      });
+
+      React.render(
+        <CommentBox />,
+        document.getElementById("content")
+      );
+    </script>
+  </body>
+</html>
